@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form action="" method="post" novalidate>
+      <div class="section">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error"></span>
+      </div>
+
+      <div class="section">
+        <label for="Country">COUNTRY</label>
+        <select id="country" required>
+          <option disabled selected value>-- select country --</option>
+          <option value="be">Belgium</option>
+          <option value="uk">UK</option>
+          <option value="us">USA</option>
+        </select>
+        <span class="error"></span>
+      </div>
+
+      <div class="section">
+        <label for="zip">ZIP</label>
+        <input type="text" id="zip" name="zip" minlength="6" required />
+        <span class="error"></span>
+      </div>
+
+      <div class="section">
+        <label for="passwrod1">PASSWORD</label>
+        <input
+          type="password"
+          id="password1"
+          name="password1"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+          required
+        />
+        <span class="error"></span>
+      </div>
+
+      <div class="section">
+        <label for="password2">CONFIRM PASSWORD</label>
+        <input type="password" id="password2" name="password2" required />
+        <span class="error"></span>
+      </div>
+
+      <div class="formButton">
+        <button type="submit">Create Account</button>
+      </div>
+    </form>
+  </body>
+</html>
